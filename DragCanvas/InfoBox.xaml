@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="DragCanvas1.InfoBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="400" Width="525" Cursor="Arrow">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="AliceBlue" Grid.Row="0"/>
+        <RichTextBox AcceptsReturn="True" Grid.Row="1" Cursor="Arrow"  IsReadOnly="true" VerticalScrollBarVisibility="Visible">
+            <FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ColumnWidth="400" FontSize="14" FontFamily="Georgia" >
+                <Paragraph FontSize="22">WPF Flow Document</Paragraph>
+                <Paragraph>Flow Documents represent a very useful way of displaying documents in WPF.</Paragraph>
+                <Paragraph>You can format the text however you like.  
+                    <Span FontFamily="Courier New" >Changing fonts
+                        <Span FontSize="24">and Font Sizes</Span>
+                    </Span>
+                </Paragraph>
+                <Paragraph Foreground="MediumBlue">
+                    Of course you can change
+                    <Span Foreground="Red" >the color</Span> of the text.
+                </Paragraph>
+                <Paragraph >
+                    <Italic>Italicise it
+                        <Bold>or Bold it with Italics</Bold>
+                    </Italic>
+                </Paragraph>
+                <Paragraph >
+                    <Bold>or without Italics.</Bold>
+                </Paragraph>
+                <Paragraph>And you can include Images ....</Paragraph>
+                <BlockUIContainer>
+                    <Image   Width="34" Source="/Images/Cog.png"/>
+                </BlockUIContainer>
+                <Paragraph FontSize="14">You can insert shapes like this blue circle
+                    <InlineUIContainer BaselineAlignment="Baseline">
+                        <Ellipse Width="10" Height ="10" Fill="Blue" />
+                    </InlineUIContainer>
+                        or images
+                    <InlineUIContainer BaselineAlignment="TextBottom" >
+                        <Image Margin="2" Width="19" Source="/Images/Cog.png" ></Image>
+                    </InlineUIContainer>
+                        inline with the text.
+                </Paragraph>
+                <Paragraph>just another line</Paragraph>
+                <Paragraph>just another line</Paragraph>
+                <Paragraph>just another line</Paragraph>
+                <Paragraph>just another line</Paragraph>
+                <Paragraph>just another line</Paragraph>
+                <Paragraph>just another line</Paragraph>
+                <Paragraph>just another line</Paragraph>
+                <Paragraph>just another line</Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</UserControl>
